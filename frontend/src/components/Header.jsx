@@ -1,10 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import '../components/css/Header.css'; // Ensure CSS is properly linked
+import { useNavigate,Link } from 'react-router-dom';
+import '../components/css/Header.css';
 
 const Header = () => {
     const [loggedInUser, setLoggedInUser] = useState('');
-    const [dropdownOpen, setDropdownOpen] = useState(false); // State to toggle dropdown
+    const [dropdownOpen, setDropdownOpen] = useState(false); 
     const navigate = useNavigate();
 
     useEffect(() => {
@@ -34,9 +34,9 @@ const Header = () => {
             <h1><span>Gaming</span>  Community</h1>
                 <div className='nav-link'>
                     <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
+                    <li><Link to="/home">Home</Link></li>
+                    <li><Link to="/login">About</Link></li>
+                    <li><Link to="/signup">Contact</Link></li>
                     </ul>
                 </div>
                 <div className="user-info">

@@ -1,9 +1,6 @@
-/* Updated gameinfo.css for responsiveness */
-
 .gameImg img {
     height: auto;
-    width: 95%;
-    /* max-width: 900px;  */
+    width: 100%;
 }
 
 main {
@@ -29,14 +26,14 @@ main {
     justify-content: space-around;
     flex-direction: row;
     align-items: flex-start;
-    flex-wrap: wrap; /* Allow wrapping for smaller screens */
+    flex-wrap: wrap;
 }
 
 .gameInfo div {
     background-color: #433242;
     margin: 1rem;
     border: 1px solid #c313b7;
-    flex: 1 1 300px; /* Adjust size dynamically */
+    flex: 1 1 300px; 
     padding: 1rem;
     box-sizing: border-box;
 }
@@ -49,6 +46,6 @@ main {
     }
 
     .gameInfo div {
-        flex: 1 1 100%; /* Full width for smaller screens */
+        flex: 1 1 100%; 
     }
 }
