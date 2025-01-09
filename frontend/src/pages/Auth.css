@@ -13,18 +13,22 @@ label{
 
 html,
 body{
+  font-style: italic;
+  font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: white;
   height: 100%;
   width: 100%;
 }
 
 body{
+  background: linear-gradient(to right, #3e0f3d,#1c0f3b);
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .container{
-  background-color: #FFF;
+  background-color: #ffffff;
   padding: 32px 48px;
   border-radius: 10px;
   width: 100%;
