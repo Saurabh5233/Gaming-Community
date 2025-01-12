@@ -1,8 +1,10 @@
+/* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
-import { handleError, handleSuccess } from '../utils';
-import '../pages/Auth.css'
+// import { handleError, handleSuccess } from '../utils.js';
+import '../authentication/Auth.css'
+import { handleError, handleSuccess } from '../../utils';
 
 
 function Signup() {
@@ -24,13 +26,13 @@ function Signup() {
     const handleSignup = async (e) => {
         e.preventDefault();
         const { name, email, password } = signupInfo;
-        console.log(name,email,password);
-
+        console.log(name, email, password);
+    
         if (!name || !email || !password) {
             return handleError('Name, email, and password are required');
         }
         try {
-            const url = `http://localhost:8081/auth/signup`; 
+            const url = `http://localhost:8080/auth/signup`; // Corrected URL
             const response = await fetch(url, {
                 method: "POST",
                 headers: {
@@ -55,7 +57,7 @@ function Signup() {
             handleError(err.message || 'Something went wrong!');
         }
     };
-
+    
     return (
         <div className='container'>
             <h1>Signup</h1>

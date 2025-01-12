@@ -1,25 +1,26 @@
-import { useEffect } from 'react'
-import { useLocation, useNavigate } from 'react-router-dom'
+/* eslint-disable react/prop-types */
+import { useEffect } from 'react';
+import { useLocation, useNavigate } from 'react-router-dom';
 
-function RefrshHandler({ setIsAuthenticated }) {
+function RefreshHandler({ setIsAuthenticated }) {
     const location = useLocation();
     const navigate = useNavigate();
 
     useEffect(() => {
-        if (localStorage.getItem('token')) {
+        const token = localStorage.getItem('token');
+        
+        if (token) {
             setIsAuthenticated(true);
-            if (location.pathname === '/' ||
-                location.pathname === '/login' ||
-                location.pathname === '/signup'
-            ) {
-                navigate('/home', { replace: false });
-            }
-        }
-    }, [location, navigate, setIsAuthenticated])
 
-    return (
-        null
-    )
+            if (['/', '/login', '/signup'].includes(location.pathname)) {
+                navigate('/home', { replace: true }); 
+            }
+        } else {
+            setIsAuthenticated(false); 
+        }
+    }, [location.pathname, navigate, setIsAuthenticated]);
+
+    return null;
 }
 
-export default RefrshHandler
+export default RefreshHandler;

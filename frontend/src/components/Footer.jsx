@@ -1,36 +1,50 @@
+/* eslint-disable no-unused-vars */
 import React from 'react';
-import '../components/css/Footer.css';
+import { Link } from 'react-router-dom'; 
+import './Footer.css';
+
 
 const Footer = () => {
-    return (
-        <footer className="footer">
-            <div className="footer-container">
-                <div className="footer-section about">
-                    <h5>About Us</h5>
-                    <p>
-                        Gaming Community is a hub for gamers to connect, share, and grow together. 
-                        Join us to explore the latest trends, events, and discussions in the gaming world.
-                    </p>
-                </div>
-                <div className="footer-section contact">
-                    <h5>Contact</h5>
-                    <p>Email: support@gamingcommunity.com</p>
-                    <p>Phone: +1-234-567-890</p>
-                    <p>Address: 123 Gaming St., Virtual City, GC 56789</p>
-                </div>
-                <div className="footer-section social">
-                    <h5>Follow Us</h5>
-                    <div className="social-links">
-                        <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">Facebook</a>
-                        <a href="https://twitter.com" target="_blank" rel="noopener noreferrer">Twitter</a>
-                        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
-                        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer">YouTube</a>
-                    </div>
-                </div>
+
+
+  const handleScroll =()=>{
+    window.scrollTo({
+      top:0,
+      behavior: 'smooth'
+    })
+  }
+
+  return (
+    <footer className="footer">
+      <div className="footer-container">
+        <div className="footer-logo">
+          <h1 id='logoName'>Game Community</h1>
+          <p> 2025 Game Community. This is our assignment for the impact training.Developed using MERN stack.Developed by Saurabh, Ram, Prashant and Khushang.</p>
+        </div>
+        <div className='footer-right'>
+            <div className="footer-links">
+              <h4>Quick Links</h4>
+              <ul>
+                <li><Link to="/" onClick={handleScroll}>Home</Link></li>
+                <li><Link to="/games" onClick={handleScroll}>Games</Link></li>
+                <li><Link to="/blogs" onClick={handleScroll}>Blog</Link></li>
+                <li><Link to="/tournaments" onClick={handleScroll}>Tournament</Link></li>
+              </ul>
             </div>
-            <p>&copy; 2025 Gaming Community. All rights reserved.</p>
-        </footer>
-    );
+
+            <div className="footer-social">
+              <h4>Follow Us</h4>
+              <ul>
+                <li><a href="https://www.facebook.com" target='_blank'>Facebook</a></li>
+                <li><a href="https://www.twitter.com" target='_blank'>Twitter</a></li>
+                <li><a href="https://www.instagram.com" target='_blank'>Instagram</a></li>
+                <li><a href="https://www.youtube.com" target='_blank'>YouTube</a></li>
+              </ul>
+            </div>
+        </div>
+        </div>
+    </footer>
+  );
 };
 
 export default Footer;

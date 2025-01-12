@@ -1,0 +1,189 @@
+/* Header Styles */
+header {
+    min-block-size: 15vh;
+    padding: 2rem 4rem;
+    color: white;
+    margin-block-end: 5vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.headerContent {
+    inline-size: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logoSpace {
+    font-size: 2.2rem;
+    color: var(--logo-color);
+    font-weight: 600;
+    text-decoration: none;
+    flex: 1;
+    text-align: left;
+}
+
+#logoName {
+    font-size: 1.9rem;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Navigation Links */
+.navLinks {
+    font-size: 1.5rem;
+    font-weight: 200;
+    display: flex;
+    gap: 2rem;
+    flex: 1;
+    justify-content: flex-end; /* Align links to the right */
+}
+
+.navLinks > a {
+    color: white;
+    text-decoration: none;
+}
+
+.navLinks > a:hover {
+    color: var(--logo-color);
+    font-weight: 500;
+    transition: 0.4s ease;
+}
+
+#join_name {
+    font-weight: 300;
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: 100%; /* Aligns below the toggle */
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    z-index: 10; /* Ensure dropdown is on top */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 0.3rem;
+}
+
+.dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    color: #343a40;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.dropdown-item:hover {
+    background-color: #f8f9fa;
+    color: #007bff;
+}
+
+/* User Info */
+.user-info {
+    position: relative;
+    cursor: pointer;
+}
+
+.profile-toggle {
+    color: white;
+    font-size: 2rem; /* Adjust size as needed */
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    margin-left: 20px;
+}
+
+.profile-toggle:hover {
+    color: var(--logo-color);
+}
+
+/* ---------------------------profile icon------------- */
+.profile-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .profile-icon {
+    width: 40px; /* Adjust size */
+    height: 40px; /* Adjust size */
+    border-radius: 50%;
+    background-color: #007bff; /* Blue background, you can change this */
+    color: white;
+    font-size: 1.2rem; /* Adjust font size */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    z-index: 10;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .dropdown-item {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 1rem;
+    color: #343a40;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .dropdown-item:hover {
+    background-color: #f8f9fa;
+  }
+  
+/* Responsive Styles */
+@media (max-width: 768px) {
+    header {
+        block-size: auto;
+        padding: 1rem 2rem;
+        margin-block-end: 0;
+    }
+
+    .logoSpace {
+        font-size: 1.8rem;
+    }
+
+    .navLinks {
+        gap: 1rem;
+    }
+
+    .navLinks > a {
+        font-size: 1.4rem;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 1rem 1.5rem;
+    }
+
+    .logoSpace {
+        font-size: 1.6rem;
+    }
+
+    .navLinks {
+        gap: 0.5rem;
+    }
+
+    .navLinks > a {
+        font-size: 1.2rem;
+    }
+}

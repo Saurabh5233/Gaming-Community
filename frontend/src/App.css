@@ -1,0 +1,17 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body{
+  /* url(../src/assets/grid.png) */
+  background-image:  linear-gradient(to right ,#3f1855,  #2d1854);
+  /* background-color: #433242;
+   */
+   /* background-color: lightpink; */
+  background-size:contain;
+  font-family: "Montserrat", "Arial";
+}
+:root{
+  --logo-color :	#FEF14E;
+}
