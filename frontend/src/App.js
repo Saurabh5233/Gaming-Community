@@ -4,7 +4,7 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import { useState } from 'react';
 import RefrshHandler from './RefrshHandler';
-import Demo from './pages/gameDemo1';
+import Demo from './pages/GamingDashboard';
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);

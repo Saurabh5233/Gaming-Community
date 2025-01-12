@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 /* eslint-disable jsx-a11y/img-redundant-alt */
 import React from "react";
 import Header from "../components/Header";
@@ -125,3 +126,4 @@ const Demo = () => {
 };
 
 export default Demo;
+
