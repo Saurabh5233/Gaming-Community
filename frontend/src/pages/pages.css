@@ -22,3 +22,104 @@
     font-size: 3rem;
     color: white;
 }
+
+/* games css */
+.page-heading {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    background-color: #1e1e2f;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .games-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .game-card {
+    background-color: #28293d;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .game-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  .game-card h3 {
+    margin: 10px 0;
+    color: #ff5a85;
+  }
+  /* tournaments css  */
+  .page-heading {
+    text-align: center;
+    padding: 20px;
+    color: #fff;
+  }
+  
+  .page-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    background-color: #1e1e2f;
+    border-radius: 10px;
+    padding: 20px;
+  }
+  
+  .tournament-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    width: 100%;
+  }
+  
+  .tournament-card {
+    background-color: #28293d;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  }
+  
+  .tournament-card h3 {
+    margin: 10px 0;
+    color: #ff5a85;
+  }
+  
+  .tournament-card p {
+    margin: 5px 0;
+  }
+  
+  .delete-button {
+    margin-top: 10px;
+    padding: 10px 20px;
+    background-color: #ff5a85;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .delete-button:hover {
+    background-color: #ff2d5b;
+  }
+  

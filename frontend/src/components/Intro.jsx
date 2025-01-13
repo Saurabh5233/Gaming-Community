@@ -2,15 +2,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom' 
 import './Intro.css'
+import { useNavigate } from 'react-router-dom';
 
 const Intro = () => {
+  const navigate = useNavigate();
 
-  const handleScroll =()=>{
-    window.scrollTo({
-      top:0,
-      behavior: 'smooth'
-    })
-  }
+  const handleScroll = (path) => {
+    const token = localStorage.getItem('authToken');
+    if (token) {
+      navigate(path);
+    } else {
+      navigate('/login');
+    }
+  };
+  
 
   return (
     <>
