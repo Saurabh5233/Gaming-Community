@@ -7,28 +7,20 @@
 }
 
 .page-heading > h1{
-    width: 100%;
-    padding-left: 4rem;
-    font-family: "Quantico";
-    font-size: 5rem;
-    font-weight: 500;
-    color: white;
-    /* background: linear-gradient(to right, #482c25, #2d555e, transparent);
-    box-shadow: 0 10px 20px rgba(255, 126, 95, 0.5), 0 -10px 20px rgba(255, 126, 95, 0.5); */
-    background: linear-gradient(to bottom, #16999d, transparent);
-box-shadow: 0 10px 20px rgba(45, 46, 45, 0.5), 0 -10px 20px rgba(35, 88, 37, 0.5);
-
-    margin-bottom: 10vh;
+  width: 100%;
+  padding-right: 4rem;
+  font-family: "Quantico";
+  font-size: 3rem;
+  font-weight: 500;
+  color: white;
+  background: linear-gradient(to bottom, #16999d, transparent);
+  box-shadow: 0 10px 20px rgba(45, 46, 45, 0.5), 0 -10px 20px rgba(35, 88, 37, 0.5);
+  margin-bottom: 10vh;
+  text-align: center;
 }
 .page-container > p{
     font-size: 3rem;
     color: white;
-<<<<<<< HEAD
-    display: flex;
-    justify-content: center;
-}
-
-=======
 }
 
 /* games css */
@@ -131,4 +123,3 @@ box-shadow: 0 10px 20px rgba(45, 46, 45, 0.5), 0 -10px 20px rgba(35, 88, 37, 0.5
     background-color: #ff2d5b;
   }
   
->>>>>>> 81efae2f5e832a351bb981ffe20c8f9419bb88d5

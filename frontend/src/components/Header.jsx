@@ -51,7 +51,7 @@ const Header = () => {
             </>
           ) : (
             <>
-              
+              <Link to="/">Home</Link>
               <Link to="/games">Games</Link>
               <Link to="/blogs">Blog</Link>
               <Link to="/tournaments">Tournaments</Link>
@@ -75,12 +75,12 @@ const Header = () => {
 
             {dropdownOpen && (
               <div className="dropdown-menu">
-                <button
+                <Link
                   onClick={() => navigate("/profile")}
                   className="dropdown-item"
                 >
                   <b>View Profile</b>
-                </button>
+                </Link>
                 
                 <Link to="/dashboard" className="dropdown-item">Dashboard</Link>
                 

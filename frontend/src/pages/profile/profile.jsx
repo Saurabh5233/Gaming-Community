@@ -142,7 +142,7 @@ const games = [
             </div>
             <p className="game-detail">{game.dateAdded}</p>
             <p className="game-detail">{game.hoursPlayed}</p>
-            <p className="game-detail">{game.status}</p>
+            {/* <p className="game-detail">{game.status}</p> */}
             <button className="download-button">{game.status}</button>
           </div>
         ))}

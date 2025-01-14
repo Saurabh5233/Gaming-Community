@@ -4,7 +4,8 @@
 /* Header Styles */
 header {
     min-block-size: 15vh;
-    padding: 2rem 4rem;
+    padding: 1rem 0;
+    padding-inline-end: 1rem;
     color: white;
     margin-block-end: 5vh;
     display: flex;
@@ -154,7 +155,7 @@ header {
 
 /* Update User Info Display */
 .profile-toggle {
-    color: blue;
+    color: rgb(1, 1, 14);
     font-size: 1.5rem;
     font-weight: 500;
     cursor: pointer;

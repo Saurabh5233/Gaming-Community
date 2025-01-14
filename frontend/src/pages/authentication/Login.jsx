@@ -28,7 +28,7 @@ function Login() {
       return handleError("Email and password are required");
     }
     try {
-      const url = `http://localhost:8080/auth/login`; // Corrected URL
+      const url = `http://localhost:8081/auth/login`; // Corrected URL
       const response = await fetch(url, {
         method: "POST",
         headers: {
@@ -43,7 +43,7 @@ function Login() {
         localStorage.setItem("token", jwtToken);
         localStorage.setItem("loggedInUser", name);
         setTimeout(() => {
-          navigate("/dashboard");
+          navigate("/home");
         }, 1000);
       } else if (error) {
         const details = error?.details?.[0]?.message || "An error occurred";
