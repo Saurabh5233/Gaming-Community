@@ -5,9 +5,11 @@ import './Intro.css'
 import { useNavigate } from 'react-router-dom';
 
 const Intro = () => {
+
   const [GameName, setGameName] = React.useState('Game Name')
   const [Category, setCategory] = React.useState('Category')
   const navigate = useNavigate();
+
 
 
   const handleScroll = (path) => {
