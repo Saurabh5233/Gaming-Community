@@ -10,6 +10,8 @@ import Login from "./pages/authentication/Login";
 import Signup from "./pages/authentication/Signup";
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
+import { Profile } from "./pages/profile/profile";
+
 
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(false);
@@ -28,6 +30,7 @@ function App() {
         {/* Public Routes */}
         <Route path="/login" element={<Login />} />
         <Route path="/signup" element={<Signup />} />
+        <Route path="/profile" element={<Profile/>} />
         
         {/* Private Route for Dashboard */}
         <Route

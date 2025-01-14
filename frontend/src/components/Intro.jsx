@@ -2,17 +2,25 @@
 import React from 'react'
 import { Link } from 'react-router-dom' 
 import './Intro.css'
+import { useNavigate } from 'react-router-dom';
 
 const Intro = () => {
+<<<<<<< HEAD
   const [GameName, setGameName] = React.useState('Game Name')
   const [Category, setCategory] = React.useState('Category')
+=======
+  const navigate = useNavigate();
+>>>>>>> 81efae2f5e832a351bb981ffe20c8f9419bb88d5
 
-  const handleScroll =()=>{
-    window.scrollTo({
-      top:0,
-      behavior: 'smooth'
-    })
-  }
+  const handleScroll = (path) => {
+    const token = localStorage.getItem('authToken');
+    if (token) {
+      navigate(path);
+    } else {
+      navigate('/login');
+    }
+  };
+  
 
   return (
     <>
