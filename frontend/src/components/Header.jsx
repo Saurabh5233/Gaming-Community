@@ -1,5 +1,6 @@
 // /* eslint-disable react-hooks/exhaustive-deps */
 // /* eslint-disable no-unused-vars */
+import CommunityPage from "../pages/Community/Community";
 
 
 import React, { useEffect, useState } from "react";
@@ -54,7 +55,7 @@ const Header = () => {
               <Link to="/">Home</Link>
               <Link to="/games">Games</Link>
               <Link to="/blogs">Blog</Link>
-              <Link to="/tournaments">Tournaments</Link>
+              <Link to="/community">Community</Link>
             </>
           )}
         </div>
@@ -75,12 +76,10 @@ const Header = () => {
 
             {dropdownOpen && (
               <div className="dropdown-menu">
-               
-                
+
                 <Link to="/profile" className="dropdown-item">View profile</Link>
                 <Link to="/dashboard" className="dropdown-item">Dashboard</Link>
-                
-                
+  
                 <Link onClick={handleLogout} className="dropdown-item">
                   Logout
                 </Link>

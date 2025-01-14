@@ -1,4 +1,7 @@
 import React from 'react'
+import NewsCard from "./NewsCards/NewsCard";
+import "./NewsCards/NewsGrid.css";
+import './pages.css'
 
 
 const newsData = [
@@ -57,9 +60,6 @@ const newsData = [
 
 
 
-import NewsCard from "./NewsCards/NewsCard";
-import "./NewsCards/NewsGrid.css";
-import './pages.css'
 
 const News=()=> {
 

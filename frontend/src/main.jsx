@@ -7,7 +7,7 @@ import Layout from './Layout.jsx'
 import Home from './pages/Home.jsx'
 import Games from './pages/Games.jsx'
 import Blog from './pages/Blog.jsx'
-import Tournament from './pages/Tournament.jsx'
+import CommunityPage from './pages/CommunityPage.jsx'
 import Login from './pages/authentication/Login.jsx'
 import Signup from './pages/authentication/Signup.jsx'
 import Dashboard from './pages/dashboard/Dashboard.jsx'
@@ -22,7 +22,7 @@ const router = createBrowserRouter(
       <Route path='/home' element={<Home />}/>
       <Route path='/games' element={<Games />} />
       <Route path='/blogs' element={<Blog />} />
-      <Route path='/tournaments' element={<Tournament />} />
+      <Route path='/community' element={<CommunityPage />} />
       <Route path='/login' element={<Login />} />
       <Route path='/signup' element={<Signup />} />
       <Route path='/dashboard' element={<Dashboard />} />

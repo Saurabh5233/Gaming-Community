@@ -9,7 +9,6 @@ import "./App.css";
 import Login from "./pages/authentication/Login";
 import Signup from "./pages/authentication/Signup";
 import '@fortawesome/fontawesome-free/css/all.min.css';
-
 import { Profile } from "./pages/profile/profile";
 
 
