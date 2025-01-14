@@ -75,14 +75,11 @@ const Header = () => {
 
             {dropdownOpen && (
               <div className="dropdown-menu">
-                <Link
-                  onClick={() => navigate("/profile")}
-                  className="dropdown-item"
-                >
-                  <b>View Profile</b>
-                </Link>
+               
                 
+                <Link to="/profile" className="dropdown-item">View profile</Link>
                 <Link to="/dashboard" className="dropdown-item">Dashboard</Link>
+                
                 
                 <Link onClick={handleLogout} className="dropdown-item">
                   Logout
