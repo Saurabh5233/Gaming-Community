@@ -7,7 +7,6 @@ const Dashboard = () => {
     <div className="dashboard">
       <header className="dashboard-header">
         <h1>Gaming Community Dashboard</h1>
-        <p>Welcome, Gamer! Stay connected and dominate the leaderboard.</p>
       </header>
 
       <div className="dashboard-content">

@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+
 /* Header Styles */
 header {
     min-block-size: 15vh;
@@ -7,6 +10,7 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .headerContent {
@@ -25,9 +29,18 @@ header {
     text-align: left;
 }
 
-#logoName {
-    font-size: 1.9rem;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+.logoSpace h1{
+    color: #88f4ed;
+    /* font-size: 4rem; */
+    /* font-family: 'Press Start 2P', cursive;  */
+    font-family: 'Orbitron', sans-serif;
+        
+}
+.logoSpace h1:hover{
+    color: rgb(0, 141, 141);
+    text-shadow: white 0px 0px 2px;
+    font-family: 'Orbitron', sans-serif;
+        
 }
 
 /* Navigation Links */
@@ -37,7 +50,8 @@ header {
     display: flex;
     gap: 2rem;
     flex: 1;
-    justify-content: flex-end; /* Align links to the right */
+    justify-content: flex-end;
+    transition: all 0.3s ease-in-out;
 }
 
 .navLinks > a {
@@ -46,43 +60,43 @@ header {
 }
 
 .navLinks > a:hover {
-    color: var(--logo-color);
+    color: blue;
     font-weight: 500;
     transition: 0.4s ease;
 }
 
-#join_name {
-    font-weight: 300;
-}
-
-/* Dropdown Menu */
-.dropdown-menu {
-    position: absolute;
-    top: 100%; /* Aligns below the toggle */
-    right: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 1rem;
-    z-index: 10; /* Ensure dropdown is on top */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    border-radius: 0.3rem;
-}
-
-.dropdown-item {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 1rem;
-    color: #343a40;
-    text-align: left;
-    background: none;
-    border: none;
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    flex-direction: column;
     cursor: pointer;
-    font-size: 1rem;
 }
 
-.dropdown-item:hover {
-    background-color: #f8f9fa;
-    color: #007bff;
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    margin: 4px 0;
+}
+
+.navLinks {
+    display: flex;
+}
+
+.navLinks.mobile {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color:rgba(51, 51, 51, 0.5);
+    padding: 1rem;
+    width: 100%;
+}
+
+.navLinks.mobile > a {
+    padding: 1rem;
+    text-align: left;
 }
 
 /* User Info */
@@ -93,7 +107,7 @@ header {
 
 .profile-toggle {
     color: white;
-    font-size: 2rem; /* Adjust size as needed */
+    font-size: 2rem;
     cursor: pointer;
     transition: color 0.3s ease-in-out;
     margin-left: 20px;
@@ -103,87 +117,88 @@ header {
     color: var(--logo-color);
 }
 
-/* ---------------------------profile icon------------- */
-.profile-toggle {
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .profile-icon {
-    width: 40px; /* Adjust size */
-    height: 40px; /* Adjust size */
-    border-radius: 50%;
-    background-color: #007bff; /* Blue background, you can change this */
-    color: white;
-    font-size: 1.2rem; /* Adjust font size */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .dropdown-menu {
-    position: absolute;
-    top: 100%;
-    right: 0;
-    background-color: white;
-    border: 1px solid #ccc;
-    padding: 1rem;
-    z-index: 10;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-  
-  .dropdown-item {
-    display: block;
-    width: 100%;
-    padding: 0.5rem 1rem;
-    color: #343a40;
-    text-align: left;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .dropdown-item:hover {
-    background-color: #f8f9fa;
-  }
-  
 /* Responsive Styles */
 @media (max-width: 768px) {
-    header {
-        block-size: auto;
-        padding: 1rem 2rem;
-        margin-block-end: 0;
-    }
-
-    .logoSpace {
-        font-size: 1.8rem;
-    }
-
     .navLinks {
-        gap: 1rem;
+        display: none;
     }
 
-    .navLinks > a {
-        font-size: 1.4rem;
+    .hamburger {
+        display: flex;
+    }
+
+    .navLinks.mobile.active {
+        display: flex;
     }
 }
 
 @media (max-width: 480px) {
-    header {
-        padding: 1rem 1.5rem;
-    }
-
     .logoSpace {
         font-size: 1.6rem;
     }
 
-    .navLinks {
-        gap: 0.5rem;
+    .navLinks.mobile {
+        width: auto;
     }
 
-    .navLinks > a {
+    .navLinks.mobile > a {
         font-size: 1.2rem;
     }
 }
+
+
+
+
+
+
+
+/* Update User Info Display */
+.profile-toggle {
+    color: blue;
+    font-size: 1.5rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: color 0.3s ease-in-out;
+    margin-left: 20px;
+}
+
+.profile-toggle:hover {
+    color: var(white);
+}
+
+/* Dropdown Menu */
+.dropdown-menu {
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    background-color: #333;
+    padding: 1rem;
+    border-radius: 5px;
+    z-index: 100;
+}
+
+.dropdown-item {
+    color: white;
+    text-decoration: none;
+    background: none;
+    border: none;
+    padding: 0.5rem;
+    cursor: pointer;
+    display: block;
+}
+
+.dropdown-item:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Responsive Updates */
+@media (max-width: 768px) {
+    .navLinks.mobile {
+        width: auto;
+    }
+
+    .navLinks.mobile > a {
+        font-size: 1.2rem;
+    }
+}
+

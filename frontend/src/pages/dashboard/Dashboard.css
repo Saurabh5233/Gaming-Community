@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+
 *{
     color: #ced6e0;
 }
@@ -15,12 +18,15 @@
   }
   
   .dashboard-header h1 {
+    font-family: 'Orbitron', sans-serif;
     font-size: 3rem;
     margin-block-end: 0.5rem;
-    color: #ff4757;
+    color: #88f4ed;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.8);
   }
-  
+  .dashboard-header h1:hover{
+    text-shadow: white 0px 0px 2px;
+  }
   .dashboard-header p {
     font-size: 1.2rem;
     color: #ced6e0;
@@ -35,9 +41,10 @@
   }
   
   .dashboard-section {
-    background-color: rgba(47, 54, 66, 0.8);
+    background-color: rgba(240, 241, 223, 0.8);
     border-radius: 10px;
     padding: 1.5rem;
+    
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
@@ -50,7 +57,7 @@
   .dashboard-section h2 {
     font-size: 1.8rem;
     margin-bottom: 1rem;
-    color: #ffa502;
+    color: #0f6f95;
     border-bottom: 2px solid #ffa502;
     padding-bottom: 0.5rem;
   }
@@ -64,6 +71,7 @@
   
   .dashboard-section li {
     margin: 0.5rem 0;
+    color: black;
     font-size: 1rem;
     display: flex;
     align-items: center;

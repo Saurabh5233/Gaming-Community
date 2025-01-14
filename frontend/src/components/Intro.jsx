@@ -4,6 +4,8 @@ import { Link } from 'react-router-dom'
 import './Intro.css'
 
 const Intro = () => {
+  const [GameName, setGameName] = React.useState('Game Name')
+  const [Category, setCategory] = React.useState('Category')
 
   const handleScroll =()=>{
     window.scrollTo({
@@ -35,8 +37,82 @@ const Intro = () => {
           <Link to="/tournaments" onClick={handleScroll} className="intro-tournament"><p>TOURNAMENTS</p></Link>
         </div>
       </div>
-
     </div>
+    
+    <div className="section-gradient"></div>
+    <div className="sample-games">
+      
+        <div className='game-list'>
+          <div className="gameCard">
+            <div className="cardImage"><img src="https://images.gog-statics.com/93ed2f65c201ee3bb0323de19946175bb0c4e4abda5b637574064c89c0cd12af.jpg" alt="game image" /></div>
+            <h3>{GameName}</h3>
+          </div>
+          <div className="gameCard">
+            <div className="cardImage"><img src="https://preview.redd.it/halo-5-on-pc-v0-vbj9ktw2z4cc1.jpeg?auto=webp&s=d3ee559a6e6ff499f87c1d8b1108ec4c3f56a03a" alt="game image" /></div>
+            <h3>{GameName}</h3>
+          </div>
+          <div className="gameCard">
+            <div className="cardImage"><img src="https://blz-contentstack-images.akamaized.net/v3/assets/bltf408a0557f4e4998/blte7acaf850e5d532d/67576d548c2c1d7026faad29/OW2_2024_S14-Launch-BNET_SHOP-browsingcard_1920x1080.png" alt="game image" /></div>
+            <h3>{GameName}</h3>
+          </div>
+     
+          
+        </div>
+      <div className="section-gradient-end"></div>
+        <div className="categories">
+          <h1>Categories</h1>
+          <div className="category-list">
+            <div className="categoryCard">
+              <div className="categoryImage"><img src="https://images.gog-statics.com/93ed2f65c201ee3bb0323de19946175bb0c4e4abda5b637574064c89c0cd12af.jpg" alt="category image" /></div>
+              <h3>{Category}</h3>
+            </div>
+            <div className="categoryCard">
+              <div className="categoryImage"><img src="https://images.gog-statics.com/93ed2f65c201ee3bb0323de19946175bb0c4e4abda5b637574064c89c0cd12af.jpg" alt="category image" /></div>
+              <h3>{Category}</h3>
+            </div>
+            <div className="categoryCard">
+              <div className="categoryImage"><img src="https://images.gog-statics.com/93ed2f65c201ee3bb0323de19946175bb0c4e4abda5b637574064c89c0cd12af.jpg" alt="category image" /></div>
+              <h3>{Category}</h3>
+            </div>
+            <div className="categoryCard">
+              <div className="categoryImage"><img src="https://images.gog-statics.com/93ed2f65c201ee3bb0323de19946175bb0c4e4abda5b637574064c89c0cd12af.jpg" alt="category image" /></div>
+              <h3>{Category}</h3>
+            </div>
+            <div className="categoryCard">
+              <div className="categoryImage"><img src="https://images.gog-statics.com/93ed2f65c201ee3bb0323de19946175bb0c4e4abda5b637574064c89c0cd12af.jpg" alt="category image" /></div>
+              <h3>{Category}</h3>
+            </div>
+            <div className="categoryCard">
+              <div className="categoryImage"><img src="https://images.gog-statics.com/93ed2f65c201ee3bb0323de19946175bb0c4e4abda5b637574064c89c0cd12af.jpg" alt="category image" /></div>
+              <h3>{Category}</h3>
+            </div>
+            <div className="categoryCard">
+              <div className="categoryImage"><img src="https://images.gog-statics.com/93ed2f65c201ee3bb0323de19946175bb0c4e4abda5b637574064c89c0cd12af.jpg" alt="category image" /></div>
+              <h3>{Category}</h3>
+            </div>
+            <div className="categoryCard">
+              <div className="categoryImage"><img src="https://images.gog-statics.com/93ed2f65c201ee3bb0323de19946175bb0c4e4abda5b637574064c89c0cd12af.jpg" alt="category image" /></div>
+              <h3>{Category}</h3>
+            </div>
+            <div className="categoryCard">
+              <div className="categoryImage"><img src="https://images.gog-statics.com/93ed2f65c201ee3bb0323de19946175bb0c4e4abda5b637574064c89c0cd12af.jpg" alt="category image" /></div>
+              <h3>{Category}</h3>
+            </div>
+            <div className="categoryCard">
+              <div className="categoryImage"><img src="https://images.gog-statics.com/93ed2f65c201ee3bb0323de19946175bb0c4e4abda5b637574064c89c0cd12af.jpg" alt="category image" /></div>
+              <h3>{Category}</h3>
+            </div>
+            <div className="categoryCard">
+              <div className="categoryImage"><img src="https://images.gog-statics.com/93ed2f65c201ee3bb0323de19946175bb0c4e4abda5b637574064c89c0cd12af.jpg" alt="category image" /></div>
+              <h3>{Category}</h3>
+            </div>
+            
+          </div>
+            <div className="section-gradient-end"></div>
+        </div>
+      </div>    
+
+
 
     </>
   )
