@@ -11,9 +11,9 @@ import CommunityPage from './pages/CommunityPage.jsx'
 import Login from './pages/authentication/Login.jsx'
 import Signup from './pages/authentication/Signup.jsx'
 import Dashboard from './pages/dashboard/Dashboard.jsx'
-// import Profile from './pages/profile/profile.jsx'
+import Profile from './pages/profile/profile.jsx'
 import '@fortawesome/fontawesome-free/css/all.min.css';
-import { Profile } from './pages/profile/profile.jsx'
+import UpdatesProfile from './pages/profile/UpdateProfile.jsx'
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -27,6 +27,8 @@ const router = createBrowserRouter(
       <Route path='/signup' element={<Signup />} />
       <Route path='/dashboard' element={<Dashboard />} />
       <Route path='/profile' element={<Profile />} />
+      {/* <Route path='/update-profile' element={<UpdatesProfile />} /> */}
+      <Route path="/update-profile/:userId" element={<UpdatesProfile/>} />
 
      {/* Catch-All Route */}
      <Route path="*" element={<div>404 - Page Not Found</div>} />

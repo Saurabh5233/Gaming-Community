@@ -92,7 +92,7 @@ function Login() {
           </div>
           <button type="submit">Login</button>
           <span>
-            Don't have an account? <Link to="/signup">Signup</Link>
+            Don&apos;t have an account? <Link to="/signup">Signup</Link>
           </span>
         </form>
         <ToastContainer />

@@ -11,9 +11,10 @@ export const Profile = () => {
   const [status, setStatus] = useState("offline"); // State to track user status
   const navigate = useNavigate();
   const token = localStorage.getItem("token");
-
+  console.log(token);
   useEffect(() => {
     const user = localStorage.getItem("loggedInUser");
+    // console.log(user);
     setLoggedInUser(user);
     if (user) {
       setStatus("active"); // Set status to active if user is logged in
@@ -29,6 +30,16 @@ export const Profile = () => {
     setTimeout(() => {
       navigate("/login");
     }, 1000);
+  };
+
+  const handleUpdatesProfile = () => {
+    const userId = localStorage.getItem("loggedInUserId");
+    if (!userId) {
+      console.error("User ID not found");
+      return;
+    }
+    navigate("/update-profile/" + userId);
+
   };
 
 
@@ -103,6 +114,7 @@ const games = [
               You haven&apos;t gone live yet. Go live by touching the button
               below.
             </p>
+            <button className="live-button" onClick={handleUpdatesProfile}>Edit Profile</button>
             <button className="live-button" onClick={handleDeleteAndLogout}>Delete Account</button>
             <button className="live-button" onClick={handleLogout}>Logout</button>
           </div>
