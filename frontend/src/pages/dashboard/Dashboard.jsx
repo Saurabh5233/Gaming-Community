@@ -58,9 +58,7 @@ const Dashboard = () => {
             <li>🎉 Community Meetup - February 5th</li>
           </ul>
         </section>
-<<<<<<< HEAD
-      
-=======
+
 
         {/* Gaming Tips Section */}
         <section className="dashboard-section gaming-tips">
@@ -82,7 +80,6 @@ const Dashboard = () => {
             <div className="featured-game">Fortnite</div>
           </div>
         </section>
->>>>>>> d0aeb270c531864f3755dfd5a73da8d43948a0ae
       </div>
       <hr />
         {/* Login Activity Section */}
