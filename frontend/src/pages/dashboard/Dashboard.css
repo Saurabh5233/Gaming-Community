@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
-<<<<<<< HEAD
 *{
     color: #e0e5ec;
 }
@@ -183,7 +182,6 @@ p {
     p {
         font-size: 0.9rem;
     }
-=======
 * {
   color: #ced6e0;
 }
@@ -309,5 +307,5 @@ p {
   .dashboard-header p {
     font-size: 1rem;
   }
->>>>>>> d0aeb270c531864f3755dfd5a73da8d43948a0ae
+}
 }
