@@ -8,14 +8,14 @@
 
 .page-heading > h1{
   width: 100%;
-  padding-right: 4rem;
+  /* padding-right: 4rem; */
   font-family: "Quantico";
   font-size: 3rem;
   font-weight: 500;
   color: white;
   background: linear-gradient(to bottom, #16999d, transparent);
   box-shadow: 0 10px 20px rgba(45, 46, 45, 0.5), 0 -10px 20px rgba(35, 88, 37, 0.5);
-  margin-bottom: 10vh;
+  /* margin-bottom: 10vh; */
   text-align: center;
 }
 .page-container > p{
@@ -110,3 +110,4 @@
     background-color: #ff2d5b;
   }
   
+
