@@ -10,6 +10,7 @@ export const Profile = () => {
   const [loggedInUser, setLoggedInUser] = useState("");
   const [status, setStatus] = useState("offline"); // State to track user status
   const navigate = useNavigate();
+  const token = localStorage.getItem("token");
 
   useEffect(() => {
     const user = localStorage.getItem("loggedInUser");
@@ -22,12 +23,43 @@ export const Profile = () => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     localStorage.removeItem("loggedInUser");
+    localStorage.removeItem("loggedInUserId");
     handleSuccess("User Logout");
     setStatus("offline"); // Reset status to offline on logout
     setTimeout(() => {
       navigate("/login");
     }, 1000);
   };
+
+
+  const handleDeleteAndLogout = () => {
+    const userId = localStorage.getItem("loggedInUserId"); // Retrieve user ID from localStorage
+  
+    if (!userId) {
+      console.error("User ID not found");
+      return;
+    }
+  
+    localStorage.removeItem("token");
+    localStorage.removeItem("loggedInUser");
+    localStorage.removeItem("loggedInUserId"); // Clear the stored user ID
+  
+    handleSuccess("User Logout");
+    setStatus("offline"); // Reset status to offline on logout
+    
+    fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/auth/deleteUser/${userId}`, {
+      method: "DELETE",
+    })
+      .then(res => res.json())
+      .then(res => console.log({ message: "User Deleted", res }))
+      .catch(err => console.error("Error deleting user:", err));
+  
+    setTimeout(() => {
+      navigate("/login");
+    }, 1000);
+  };
+  
+  
 // gaming section 
 const games = [
     {
@@ -71,6 +103,7 @@ const games = [
               You haven&apos;t gone live yet. Go live by touching the button
               below.
             </p>
+            <button className="live-button" onClick={handleDeleteAndLogout}>Delete Account</button>
             <button className="live-button" onClick={handleLogout}>Logout</button>
           </div>
         </div>

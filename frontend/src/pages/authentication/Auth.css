@@ -42,6 +42,13 @@ label {
   font-weight: bold;
   color: #555;
 }
+input{
+  color: black;
+}
+
+span{
+  color: gray;
+}
 
 input[type="text"],
 input[type="email"],

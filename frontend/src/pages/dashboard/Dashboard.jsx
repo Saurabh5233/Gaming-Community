@@ -1,8 +1,18 @@
 /* eslint-disable no-unused-vars */
 import React from "react";
 import "./Dashboard.css";
+import { useEffect } from "react";
 
 const Dashboard = () => {
+  const [userLogins, setUserLogins] = React.useState([])
+  useEffect(()=>{
+    fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/userDetail`)
+    .then(res => res.json())
+    .then(res => setUserLogins(res))
+    .catch(err => console.error("Fetch error:", err));
+    // console.log(userLogins)
+  })
+
   return (
     <div className="dashboard">
       <header className="dashboard-header">
@@ -45,7 +55,32 @@ const Dashboard = () => {
             <li>🎉 Community Meetup - February 5th</li>
           </ul>
         </section>
+      
       </div>
+      <hr />
+        {/* Login Activity Section */}
+        <section className="dashboard-section ">
+          <h2>Login Activity</h2>
+          <p>Recent logins:</p>
+          <table>
+            <thead>
+              <tr>
+                <th>User</th>
+                <th>Email</th>
+                <th>Login time</th>
+              </tr>
+            </thead>
+            <tbody>
+              {userLogins.map((user, index) => (
+                <tr key={index}>
+                  <td>🔑 {user.name}</td>
+                  <td>{user.email}</td>
+                  <td>{user.createdAt}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </section>
     </div>
   );
 };

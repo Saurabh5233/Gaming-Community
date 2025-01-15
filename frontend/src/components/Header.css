@@ -1,6 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
 
-
 /* Header Styles */
 header {
     min-block-size: 15vh;
@@ -30,18 +29,14 @@ header {
     text-align: left;
 }
 
-.logoSpace h1{
+.logoSpace h1 {
     color: #88f4ed;
-    /* font-size: 4rem; */
-    /* font-family: 'Press Start 2P', cursive;  */
     font-family: 'Orbitron', sans-serif;
-        
 }
-.logoSpace h1:hover{
+
+.logoSpace h1:hover {
     color: rgb(0, 141, 141);
     text-shadow: white 0px 0px 2px;
-    font-family: 'Orbitron', sans-serif;
-        
 }
 
 /* Navigation Links */
@@ -90,7 +85,7 @@ header {
     position: absolute;
     top: 100%;
     right: 0;
-    background-color:rgba(51, 51, 51, 0.5);
+    background-color: rgba(51, 51, 51, 0.5);
     padding: 1rem;
     width: 100%;
 }
@@ -100,6 +95,12 @@ header {
     text-align: left;
 }
 
+/* Mobile Menu Active */
+.navLinks.mobile.active {
+    display: flex;
+    z-index: 9999; /* Ensure it appears on top */
+}
+
 /* User Info */
 .user-info {
     position: relative;
@@ -107,15 +108,15 @@ header {
 }
 
 .profile-toggle {
-    color: white;
-    font-size: 2rem;
+    color: rgb(255, 255, 255);
+    font-size: 3rem;
     cursor: pointer;
     transition: color 0.3s ease-in-out;
     margin-left: 20px;
 }
 
 .profile-toggle:hover {
-    color: var(--logo-color);
+    color: black;
 }
 
 /* Responsive Styles */
@@ -147,12 +148,6 @@ header {
     }
 }
 
-
-
-
-
-
-
 /* Update User Info Display */
 .profile-toggle {
     color: rgb(1, 1, 14);
@@ -164,7 +159,7 @@ header {
 }
 
 .profile-toggle:hover {
-    color: var(white);
+    color: white;
 }
 
 /* Dropdown Menu */
@@ -202,4 +197,3 @@ header {
         font-size: 1.2rem;
     }
 }
-

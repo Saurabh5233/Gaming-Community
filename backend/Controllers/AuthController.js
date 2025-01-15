@@ -53,12 +53,12 @@ const login = async (req, res) => {
             { expiresIn: '1s' }
         );
 
-        res.status(200).json({
-            message: "Login Success",
+        return res.json({
             success: true,
+            message: "Login successful",
             jwtToken,
-            email,
-            name: user.name
+            name: user.name,
+            _id: user._id, 
         });
         
     } catch (err) {

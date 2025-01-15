@@ -24,11 +24,13 @@ function Login() {
   const handleLogin = async (e) => {
     e.preventDefault();
     const { email, password } = loginInfo;
+  
     if (!email || !password) {
       return handleError("Email and password are required");
     }
+  
     try {
-      const url = `http://localhost:8081/auth/login`; // Corrected URL
+      const url = `${import.meta.env.VITE_REACT_APP_BACKEND_URL}/auth/login`;
       const response = await fetch(url, {
         method: "POST",
         headers: {
@@ -36,12 +38,17 @@ function Login() {
         },
         body: JSON.stringify(loginInfo),
       });
+  
       const result = await response.json();
-      const { success, message, jwtToken, name, error } = result;
+      const { success, message, jwtToken, name, _id, error } = result;
+  
       if (success) {
         handleSuccess(message);
+        
         localStorage.setItem("token", jwtToken);
         localStorage.setItem("loggedInUser", name);
+        localStorage.setItem("loggedInUserId", _id); 
+  
         setTimeout(() => {
           navigate("/home");
         }, 1000);
@@ -51,10 +58,12 @@ function Login() {
       } else {
         handleError(message || "An unknown error occurred");
       }
+  
     } catch (err) {
       handleError(err.message || "Something went wrong!");
     }
   };
+  
   
   return (
     <main>
@@ -83,7 +92,7 @@ function Login() {
           </div>
           <button type="submit">Login</button>
           <span>
-            Don&apos;t have an account? <Link to="/signup">Signup</Link>
+            Don't have an account? <Link to="/signup">Signup</Link>
           </span>
         </form>
         <ToastContainer />

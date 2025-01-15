@@ -3,22 +3,29 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const AuthRouter = require('./Routes/AuthRouter');
-// const ProductRouter = require('./Routes/ProductRouter');
-
+const UserModel = require('./Models/User');
 require('dotenv').config();
 require('./Models/db');
-const PORT = process.env.PORT || 8080;
 
-// app.get('/ping', (req, res) => {
-//     res.send('PONG');
-// });
-
+// Middleware
 app.use(bodyParser.json());
 app.use(cors());
+
+// Routes
 app.use('/auth', AuthRouter);
-// app.use('/products', ProductRouter);
 
+// Fetch All User Details
+app.get("/userDetail", async (req, res) => {
+  try {
+    const users = await UserModel.find();
+    res.status(200).json(users);
+  } catch (err) {
+    res.status(500).json({ message: "Error retrieving user details", error: err });
+  }
+});
 
+// Start Server
+const PORT = process.env.PORT || 8081;
 app.listen(PORT, () => {
-    console.log(`Server is running on http://localhost:${PORT}`)
-})
+  console.log(`Server is running on http://localhost:${PORT}`);
+});
