@@ -6,7 +6,8 @@ const Dashboard = () => {
   return (
     <div className="dashboard">
       <header className="dashboard-header">
-        <h1>Gaming Community Dashboard</h1>
+        <h1>Dashboard</h1>
+        {/* <p>Your hub for the latest gaming updates, tournaments, and events!</p> */} 
       </header>
 
       <div className="dashboard-content">
@@ -23,7 +24,9 @@ const Dashboard = () => {
         {/* Active Players Section */}
         <section className="dashboard-section active-players">
           <h2>Active Players</h2>
-          <p>Currently online: <span className="active-count">253</span> players</p>
+          <p>
+            Currently online: <span className="active-count">253</span> players
+          </p>
         </section>
 
         {/* Leaderboard Section */}
@@ -44,6 +47,27 @@ const Dashboard = () => {
             <li>🏆 Solo Championship - January 28th</li>
             <li>🎉 Community Meetup - February 5th</li>
           </ul>
+        </section>
+
+        {/* Gaming Tips Section */}
+        <section className="dashboard-section gaming-tips">
+          <h2>Pro Gaming Tips</h2>
+          <ul>
+            <li>🎯 Aim training exercises to improve accuracy.</li>
+            <li>💻 Optimize PC settings for better FPS and performance.</li>
+            <li>🤝 Communication is key: Use team chat effectively.</li>
+          </ul>
+        </section>
+
+        {/* Featured Games Section */}
+        <section className="dashboard-section featured-games">
+          <h2>Featured Games</h2>
+          <div className="featured-game-grid">
+            <div className="featured-game">Valorant</div>
+            <div className="featured-game">League of Legends</div>
+            <div className="featured-game">Minecraft</div>
+            <div className="featured-game">Fortnite</div>
+          </div>
         </section>
       </div>
     </div>

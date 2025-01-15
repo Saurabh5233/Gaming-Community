@@ -28,7 +28,7 @@ const Footer = () => {
                 <li><Link to="/" onClick={handleScroll}>Home</Link></li>
                 <li><Link to="/games" onClick={handleScroll}>Games</Link></li>
                 <li><Link to="/blogs" onClick={handleScroll}>Blog</Link></li>
-                <li><Link to="/tournaments" onClick={handleScroll}>Tournament</Link></li>
+                <li><Link to="/community" onClick={handleScroll}>Community</Link></li>
               </ul>
             </div>
 
