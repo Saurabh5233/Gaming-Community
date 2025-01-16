@@ -28,7 +28,7 @@ const router = createBrowserRouter(
       <Route path='/dashboard' element={<Dashboard />} />
       <Route path='/profile' element={<Profile />} />
       {/* <Route path='/update-profile' element={<UpdatesProfile />} /> */}
-      <Route path="/update-profile/:userId" element={<UpdatesProfile/>} />
+      <Route path="/update-profile" element={<UpdatesProfile/>} />
 
      {/* Catch-All Route */}
      <Route path="*" element={<div>404 - Page Not Found</div>} />

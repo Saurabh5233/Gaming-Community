@@ -3,22 +3,19 @@
 import "./profile.css";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { handleError, handleSuccess } from "../../utils";
+import { handleSuccess } from "../../utils";
 import { ToastContainer } from "react-toastify";
 
 export const Profile = () => {
+  const userId = localStorage.getItem("loggedInUserId");
   const [loggedInUser, setLoggedInUser] = useState("");
-  const [status, setStatus] = useState("offline"); // State to track user status
+  const [status, setStatus] = useState("offline");
   const navigate = useNavigate();
-  const token = localStorage.getItem("token");
-  console.log(token);
+
   useEffect(() => {
     const user = localStorage.getItem("loggedInUser");
-    // console.log(user);
     setLoggedInUser(user);
-    if (user) {
-      setStatus("active"); // Set status to active if user is logged in
-    }
+    if (user) setStatus("active");
   }, []);
 
   const handleLogout = () => {
@@ -26,50 +23,32 @@ export const Profile = () => {
     localStorage.removeItem("loggedInUser");
     localStorage.removeItem("loggedInUserId");
     handleSuccess("User Logout");
-    setStatus("offline"); // Reset status to offline on logout
-    setTimeout(() => {
-      navigate("/login");
-    }, 1000);
+    setStatus("offline");
+    setTimeout(() => navigate("/login"), 1000);
   };
-
-  const handleUpdatesProfile = () => {
-    const userId = localStorage.getItem("loggedInUserId");
-    if (!userId) {
-      console.error("User ID not found");
-      return;
-    }
-    navigate("/update-profile/" + userId);
-
-  };
-
 
   const handleDeleteAndLogout = () => {
-    const userId = localStorage.getItem("loggedInUserId"); // Retrieve user ID from localStorage
-  
     if (!userId) {
       console.error("User ID not found");
       return;
     }
-  
+
     localStorage.removeItem("token");
     localStorage.removeItem("loggedInUser");
-    localStorage.removeItem("loggedInUserId"); // Clear the stored user ID
-  
+    localStorage.removeItem("loggedInUserId");
+
     handleSuccess("User Logout");
-    setStatus("offline"); // Reset status to offline on logout
-    
+    setStatus("offline");
+
     fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/auth/deleteUser/${userId}`, {
       method: "DELETE",
     })
-      .then(res => res.json())
-      .then(res => console.log({ message: "User Deleted", res }))
-      .catch(err => console.error("Error deleting user:", err));
-  
-    setTimeout(() => {
-      navigate("/login");
-    }, 1000);
+      .then((res) => res.json())
+      .then((res) => console.log({ message: "User Deleted", res }))
+      .catch((err) => console.error("Error deleting user:", err));
+
+    setTimeout(() => navigate("/login"), 1000);
   };
-  
   
 // gaming section 
 const games = [
@@ -98,6 +77,8 @@ const games = [
       image: "https://i.ibb.co/KN1Qcx0/popular-03.jpg", // Replace with actual image URL
     },
   ];
+
+  
   return (
     <div className="profile-container">
       <div className="profile-header">
@@ -114,7 +95,7 @@ const games = [
               You haven&apos;t gone live yet. Go live by touching the button
               below.
             </p>
-            <button className="live-button" onClick={handleUpdatesProfile}>Edit Profile</button>
+            <button className="live-button" onClick={() => navigate("/update-profile")}> Edit Profile</button>
             <button className="live-button" onClick={handleDeleteAndLogout}>Delete Account</button>
             <button className="live-button" onClick={handleLogout}>Logout</button>
           </div>

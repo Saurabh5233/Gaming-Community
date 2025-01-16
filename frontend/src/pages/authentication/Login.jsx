@@ -48,9 +48,10 @@ function Login() {
         localStorage.setItem("token", jwtToken);
         localStorage.setItem("loggedInUser", name);
         localStorage.setItem("loggedInUserId", _id); 
-  
+        
         setTimeout(() => {
           navigate("/home");
+          window.location.reload();
         }, 1000);
       } else if (error) {
         const details = error?.details?.[0]?.message || "An error occurred";
