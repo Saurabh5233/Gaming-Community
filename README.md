@@ -135,10 +135,10 @@ Gaming-Community/
 ---
 
 ## Contributing
-### Saurabh Shandilya
-### Ramchandra
-### Prashant Prasad
-### Kushang Dhave
-Feel free to fork the repository and make your contributions. Submit a pull request for review. Ensure your code follows the project's coding guidelines.
+- ## Saurabh Shandilya
+- ## Ramchandra
+- ## Prashant Prasad
+- ## Kushang Dhave
+We welcome contributions! Feel free to fork the repository and make your contributions. Submit a pull request for review. Ensure your code follows the project's coding guidelines.
 
 
