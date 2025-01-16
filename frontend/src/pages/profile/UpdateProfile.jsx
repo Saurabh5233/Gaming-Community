@@ -1,97 +1,91 @@
-/* eslint-disable no-unused-vars */
-import { useState, useEffect } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import React, { useState ,useEffect} from "react";
+// import "../authentication/auth.css";
+
 import "./updateProfile.css";
-import axios from "axios";
-import { toast, ToastContainer } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
+import { handleSuccess } from "../../utils";
+import { useNavigate } from "react-router-dom";
 
 const UpdateProfile = () => {
-  const initialUser = {
-    name: "",
-    email: "",
-  };
-  const [user, setUser] = useState(initialUser);
   const navigate = useNavigate();
-  const { id } = useParams();
+  const userId = localStorage.getItem("loggedInUserId");
+  const [updateInfo, setUpdateInfo] = useState({ name: "", email: "" });
 
-  // Handler for input change
-  const inputHandler = (e) => {
+  useEffect(() => {
+    // Fetch existing user details to populate the form
+    if (userId) {
+      fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/auth/updateUser/${userId}`,{
+        method:"PUT",
+      })
+        .then((res) => res.json())
+        .then((data) => setUpdateInfo({ name: data.name, email: data.email }))
+        .catch((err) => console.error("Error fetching user details:", err));
+    }
+  }, [userId]);
+
+  const handleChange = (e) => {
     const { name, value } = e.target;
-    setUser({ ...user, [name]: value });
+    setUpdateInfo({ ...updateInfo, [name]: value });
   };
 
-  // Fetch user details on component mount
-  useEffect(() => {
-    axios
-      .get(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/auth/update-profile/${id}`)
-      .then((response) => {
-        setUser(response.data);
-      })
-      .catch((error) => {
-        console.error(error);
-        toast.error("Failed to load profile details.", { position: "top-right" });
-      });
-  }, [id]);
-
-  // Form submission handler
-  const submitForm = async (e) => {
+  const handleUpdatesProfile = (e) => {
     e.preventDefault();
 
-    if (!user.name.trim() || !user.email.trim()) {
-      toast.error("All fields are required.", { position: "top-right" });
+    if (!userId) {
+      console.error("User ID not found");
       return;
     }
 
-    try {
-      const response = await axios.put(
-        `${import.meta.env.VITE_REACT_APP_BACKEND_URL}/auth/update-profile/${id}`,
-        user
-      );
-      toast.success(response.data.message, { position: "top-right" });
-      navigate("/profile");
-    } catch (error) {
-      console.error(error);
-      toast.error("Failed to update profile. Please try again.", { position: "top-right" });
-    }
+    fetch(`${import.meta.env.VITE_REACT_APP_BACKEND_URL}/auth/updateUser/${userId}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(updateInfo),
+    })
+      .then((res) => res.json())
+      .then((res) => {
+        console.log("User details updated successfully:", res);
+        handleSuccess("Details updated successfully!");
+        localStorage.setItem("loggedInUser", updateInfo.name);
+        navigate("/profile");
+        window.location.reload();
+      })
+      .catch((err) => console.error("Error updating user details:", err));
   };
 
   return (
-    <main>
-      <div className="update-profile-container">
-        <h2>Edit Profile</h2>
-        <form onSubmit={submitForm}>
-          <div className="form-group">
-            <label htmlFor="name">Name:</label>
-            <input
-               type="text"
-               id="name"
-               value={user.name}
-               onChange={inputHandler}
-               name="name"
-               autoComplete="off"
-               placeholder="Enter your Name"
-            />
-          </div>
-          <div className="form-group">
-            <label htmlFor="email">Email:</label>
-            <input
-              type="email"
-              id="email"
-              value={user.email}
-              onChange={inputHandler}
-              name="email"
-              autoComplete="off"
-              placeholder="Enter your Email"
-            />
-          </div>
-          <button type="submit" className="btn btn-primary">
-            Submit
-          </button>
-        </form>
-     < ToastContainer/>
-      </div>
-    </main>
+    <div className="update-profile-container">
+      <h1>Update Your Profile</h1>
+      <form onSubmit={handleUpdatesProfile}>
+        <div className="form-group">
+          <label htmlFor="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            value={updateInfo.name}
+            onChange={handleChange}
+            placeholder="Enter your name"
+            required
+          />
+        </div>
+        <div className="form-group">
+          <label htmlFor="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            value={updateInfo.email}
+            onChange={handleChange}
+            placeholder="Enter your email"
+            required
+          />
+        </div>
+        <button type="submit" className="submit-button">
+          Update Profile
+        </button>
+      </form>
+    </div>
   );
 };
 

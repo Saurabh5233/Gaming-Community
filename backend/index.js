@@ -8,6 +8,7 @@ require('dotenv').config();
 require('./Models/db');
 
 // Middleware
+app.use(express.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 app.use(cors());
 
