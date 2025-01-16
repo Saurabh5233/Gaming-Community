@@ -1,7 +1,7 @@
 import React, { useState ,useEffect} from "react";
 // import "../authentication/auth.css";
 
-import "./updateProfile.css";
+import "./UpdateProfile.css";
 import { handleSuccess } from "../../utils";
 import { useNavigate } from "react-router-dom";
 
