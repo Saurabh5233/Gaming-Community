@@ -2,7 +2,12 @@
 
 ## Description
 Gaming Community is a full-stack application designed to provide gaming enthusiasts with detailed information about games and a platform to join gaming communities. The project is built using **React.js** for the frontend, **Express.js** for the backend, and **MongoDB Atlas** for database management.
-
+---
+## Home Page 
+![Logo](https://i.ibb.co/dkQ98Fk/homePage.png)
+---
+## Profile
+![Logo](https://i.ibb.co/18hBG87/profile.png)
 ---
 
 ## Features
