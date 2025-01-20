@@ -247,16 +247,16 @@
 /* Horizontal Scroll for Game Categories */
 .category-list {
   display: flex;
-  overflow-x: auto; /* Enables horizontal scrolling */
+  overflow-x: auto; 
   gap: 1rem;
   padding: 1rem;
-  scroll-behavior: smooth; /* Smooth scrolling effect */
-  white-space: nowrap; /* Prevents wrapping of child elements */
+  scroll-behavior: smooth;
+  white-space: nowrap; 
 }
 
 .categoryCard {
-  flex: 0 0 auto; /* Prevents resizing and maintains grid structure */
-  width: 300px; /* Adjust the size as per design */
+  flex: 0 0 auto;
+  width: 300px; 
   margin: 0 0.5rem;
 }
 

@@ -95,7 +95,6 @@ header {
     text-align: left;
 }
 
-/* Mobile Menu Active */
 .navLinks.mobile.active {
     display: flex;
     z-index: 9999; /* Ensure it appears on top */

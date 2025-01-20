@@ -1,0 +1,51 @@
+[
+    {
+      "game_name": "The Legend of Zelda: Breath of the Wild",
+      "img_url": "https://example.com/zelda.jpg"
+    },
+    {
+      "game_name": "Super Mario Odyssey",
+      "img_url": "https://example.com/super_mario_odyssey.jpg"
+    },
+    {
+      "game_name": "Minecraft",
+      "img_url": "https://example.com/minecraft.jpg"
+    },
+    {
+      "game_name": "Red Dead Redemption 2",
+      "img_url": "https://example.com/red_dead_redemption_2.jpg"
+    },
+    {
+      "game_name": "Fortnite",
+      "img_url": "https://example.com/fortnite.jpg"
+    },
+    {
+      "game_name": "Call of Duty: Modern Warfare",
+      "img_url": "https://example.com/call_of_duty_modern_warfare.jpg"
+    },
+    {
+      "game_name": "The Witcher 3: Wild Hunt",
+      "img_url": "https://example.com/witcher_3.jpg"
+    },
+    {
+      "game_name": "Overwatch",
+      "img_url": "https://example.com/overwatch.jpg"
+    },
+    {
+      "game_name": "Apex Legends",
+      "img_url": "https://example.com/apex_legends.jpg"
+    },
+    {
+      "game_name": "Animal Crossing: New Horizons",
+      "img_url": "https://example.com/animal_crossing_new_horizons.jpg"
+    },
+    {
+      "game_name": "Grand Theft Auto V",
+      "img_url": "https://example.com/grand_theft_auto_v.jpg"
+    },
+    {
+      "game_name": "Hades",
+      "img_url": "https://example.com/hades.jpg"
+    }
+  ]
+  
