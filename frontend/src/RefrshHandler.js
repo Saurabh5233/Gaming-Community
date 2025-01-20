@@ -1,3 +1,7 @@
+<<<<<<< HEAD
+=======
+
+>>>>>>> c83aea117e778be044a1b43995cf66d350acaaf0
 import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
