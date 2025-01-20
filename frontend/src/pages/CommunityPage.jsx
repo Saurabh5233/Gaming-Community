@@ -107,8 +107,7 @@ const CommunityPage = () => {
         <h1>Community Members</h1>
 
 
-        <div className="community-layout">
-          {/* Sidebar */}
+        
 
 
 
@@ -116,7 +115,8 @@ const CommunityPage = () => {
           <div className="member-cards-container">
             {token ? (
               <>
-
+                <div className="community-layout">
+                {/* Sidebar */}
                 <div className={`sidebar ${showSidebar ? "active" : ""}`}>
                   <h2>Points</h2>
                   <div className="points-section">
@@ -147,12 +147,12 @@ const CommunityPage = () => {
                     <Community key={index} member={member} />
                   ))}
                 </div>
+          </div>
               </>
 
             ) : (
               <h2>Please Login to see community.</h2>
             )}
-          </div>
         </div>
       </div>
 
