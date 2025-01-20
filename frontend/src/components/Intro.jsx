@@ -47,7 +47,7 @@ const Intro = () => {
     </div>
     <div className='intro-bottom'>
       <div className="intro-bottom-content">
-        <h1>Login to explore these Adventures</h1>
+        <h1>Explore these Adventures</h1>
         <h2>Discover the ultimate destination for gaming enthusiasts! Dive into a variety of exciting games, challenge yourself in competitive tournaments, and explore insightful articles and tips on our blog. Join the community and level up your gaming experience today!</h2>
         <div>
           <Link to="/games" onClick={handleScroll} className="intro-game"><p>GAMES</p></Link>
