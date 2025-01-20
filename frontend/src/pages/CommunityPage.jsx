@@ -10,7 +10,7 @@ const membersData = [
     name: "Saurabh Shandilya",
     role: "Community Lead",
     points: { lightning: 10, diamond: 5, heart: 2 },
-    image: "https://i.ibb.co/pLfw0t7/Whats-App-Image-2025-01-15-at-14-08-33-bfc01a5d.jpg",
+    image: "https://images.pexels.com/users/avatars/415023969/saurabh-shandilya-170.jpeg?auto=compress&fit=crop&h=130&w=130&dpr=1",
     badges: ["medal", "plus"],
   },
   {
