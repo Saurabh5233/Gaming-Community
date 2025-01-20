@@ -8,7 +8,7 @@ body{
   /* background-image:  linear-gradient(to right ,rgb(56, 55, 82),#9627d6); */
   /* background-image:  linear-gradient(to right ,rgb(104, 1, 66),#f405b4); */
   /* background-image:  linear-gradient(to right ,rgb(25, 58, 15),rgb(47, 98, 31),#088316); */
-  background-image:  linear-gradient(to right ,#080f45,#38b3c1);
+  background-image: url('./assets/grid.png'),  linear-gradient(to right ,#080f45,#38b3c1);
   /* background-color: #433242;
    */
    /* background-color: lightpink; */
