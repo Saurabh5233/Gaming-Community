@@ -1,0 +1,44 @@
+ [
+      {
+        "category": "Action",
+        "image_url": "https://example.com/images/action.jpg"
+      },
+      {
+        "category": "Adventure",
+        "image_url": "https://example.com/images/adventure.jpg"
+      },
+      {
+        "category": "RPG",
+        "image_url": "https://example.com/images/rpg.jpg"
+      },
+      {
+        "category": "Strategy",
+        "image_url": "https://example.com/images/strategy.jpg"
+      },
+      {
+        "category": "Simulation",
+        "image_url": "https://example.com/images/simulation.jpg"
+      },
+      {
+        "category": "Shooter",
+        "image_url": "https://example.com/images/shooter.jpg"
+      },
+      {
+        "category": "Sports",
+        "image_url": "https://example.com/images/sports.jpg"
+      },
+      {
+        "category": "Puzzle",
+        "image_url": "https://example.com/images/puzzle.jpg"
+      },
+      {
+        "category": "Horror",
+        "image_url": "https://example.com/images/horror.jpg"
+      },
+      {
+        "category": "MMO",
+        "image_url": "https://example.com/images/mmo.jpg"
+      }
+    ]
+  
+  
