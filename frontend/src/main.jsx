@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { RouterProvider, Router, createBrowserRouter, createRoutesFromElements, Route} from 'react-router-dom'
@@ -27,10 +26,8 @@ const router = createBrowserRouter(
       <Route path='/signup' element={<Signup />} />
       <Route path='/dashboard' element={<Dashboard />} />
       <Route path='/profile' element={<Profile />} />
-      {/* <Route path='/update-profile' element={<UpdatesProfile />} /> */}
       <Route path="/update-profile" element={<UpdatesProfile/>} />
 
-     {/* Catch-All Route */}
      <Route path="*" element={<div>404 - Page Not Found</div>} />
     </Route>
   )

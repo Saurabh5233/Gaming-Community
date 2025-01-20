@@ -1,4 +1,3 @@
-/* eslint-disable no-unused-vars */
 import React from "react";
 import "./Community/Community.css";
 import Community from "./Community/Community";
