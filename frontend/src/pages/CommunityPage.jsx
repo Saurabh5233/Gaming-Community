@@ -107,49 +107,56 @@ const CommunityPage = () => {
         <h1>Community Members</h1>
 
 
-      <div className="community-layout">
-        {/* Sidebar */}
-        <div className={`sidebar ${showSidebar ? "active" : ""}`}>
-          <h2>Points</h2>
-          <div className="points-section">
-            <div className="points-item">
-              <span>⚡ Lightning Points:</span> <span>0</span>
-            </div>
-            <div className="points-item">
-              <span>💎 Diamond Points:</span> <span>0</span>
-            </div>
-            <div className="points-item">
-              <span>❤️ Heart Points:</span> <span>0</span>
-            </div>
+        <div className="community-layout">
+          {/* Sidebar */}
+
+
+
+          {/* Member Cards Section */}
+          <div className="member-cards-container">
+            {token ? (
+              <>
+
+                <div className={`sidebar ${showSidebar ? "active" : ""}`}>
+                  <h2>Points</h2>
+                  <div className="points-section">
+                    <div className="points-item">
+                      <span>⚡ Lightning Points:</span> <span>0</span>
+                    </div>
+                    <div className="points-item">
+                      <span>💎 Diamond Points:</span> <span>0</span>
+                    </div>
+                    <div className="points-item">
+                      <span>❤️ Heart Points:</span> <span>0</span>
+                    </div>
+                  </div>
+
+                  <h2>Achievements</h2>
+                  <div className="achievements-section">
+                    <div className="achievement-item">🏆 Medal</div>
+                    <div className="achievement-item">➕ Plus Badge</div>
+                  </div>
+
+                  <h3>Online Members</h3>
+                  <p>There are no users</p>
+                </div>
+
+
+                <div className="member-cards">
+                  {membersData.map((member, index) => (
+                    <Community key={index} member={member} />
+                  ))}
+                </div>
+              </>
+
+            ) : (
+              <h2>Please Login to see community.</h2>
+            )}
           </div>
-
-          <h2>Achievements</h2>
-          <div className="achievements-section">
-            <div className="achievement-item">🏆 Medal</div>
-            <div className="achievement-item">➕ Plus Badge</div>
-          </div>
-
-          <h3>Online Members</h3>
-          <p>There are no users</p>
-        </div>
-
-
-        {/* Member Cards Section */}
-        <div className="member-cards-container">
-          {token ? (
-            <div className="member-cards">
-              {membersData.map((member, index) => (
-                <Community key={index} member={member} />
-              ))}
-            </div>
-          ) : (
-            <p>Please Login to see blogs.</p>
-          )}
         </div>
       </div>
-      </div>
 
-      
+
 
     </div>
   );

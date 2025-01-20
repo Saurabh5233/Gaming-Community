@@ -95,7 +95,7 @@ const Games = () => {
           <GameCard key={index} Game={Game} />
         ))}
       </div>
-      : <p>Please Login to see games.</p>}
+      : <h2>Please Login to see games.</h2>}
       
     </div>
     </div>

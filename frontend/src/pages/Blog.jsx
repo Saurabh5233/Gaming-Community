@@ -77,7 +77,7 @@ const News=()=> {
           <NewsCard key={index} news={news} />
         ))}
       </div>
-      : <p>Please Login to see blogs.</p>}
+      : <h2>Please Login to see blogs.</h2>}
       
     </div>
     </>
