@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-
-=======
->>>>>>> parent of a0fa5ad (Merge branch 'main')
 import { useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 
