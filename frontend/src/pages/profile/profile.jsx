@@ -58,7 +58,7 @@ const games = [
       dateAdded: "24/08/2036",
       hoursPlayed: "634 H 22 Mins",
       status: "Downloaded",
-      image: "https://i.ibb.co/xG87zqH/popular-05.jpg", // Replace with actual image URL
+      image: "https://i.ibb.co/xG87zqH/popular-05.jpg"
     },
     {
       name: "Fortnite",
@@ -66,7 +66,7 @@ const games = [
       dateAdded: "22/06/2036",
       hoursPlayed: "745 H 12 Mins",
       status: "Downloaded",
-      image: "https://i.ibb.co/jGv7kWQ/popular-04.jpg", // Replace with actual image URL
+      image: "https://i.ibb.co/jGv7kWQ/popular-04.jpg"
     },
     {
       name: "CS-GO",
@@ -74,7 +74,7 @@ const games = [
       dateAdded: "21/04/2022",
       hoursPlayed: "632 H 46 Mins",
       status: "Downloaded",
-      image: "https://i.ibb.co/KN1Qcx0/popular-03.jpg", // Replace with actual image URL
+      image: "https://i.ibb.co/KN1Qcx0/popular-03.jpg"
     },
   ];
 
