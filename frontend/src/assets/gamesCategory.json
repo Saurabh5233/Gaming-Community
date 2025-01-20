@@ -1,43 +1,43 @@
  [
       {
         "category": "Action",
-        "image_url": "https://example.com/images/action.jpg"
+        "image_url": "https://hips.hearstapps.com/hmg-prod/images/action-1574801790.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*"
       },
       {
         "category": "Adventure",
-        "image_url": "https://example.com/images/adventure.jpg"
+        "image_url": "https://hips.hearstapps.com/hmg-prod/images/adgames-1576082687.jpg?crop=1.00xw:1.00xh;0,0&resize=1200:*"
       },
       {
         "category": "RPG",
-        "image_url": "https://example.com/images/rpg.jpg"
+        "image_url": "https://hips.hearstapps.com/hmg-prod/images/untitled-1-1-1566593533.jpg?resize=1200:*"
       },
       {
         "category": "Strategy",
-        "image_url": "https://example.com/images/strategy.jpg"
+        "image_url": "https://assets.rockpapershotgun.com/images/2020/01/Dune-II-Legacy-Best-strategy-games-2020.jpg"
       },
       {
         "category": "Simulation",
-        "image_url": "https://example.com/images/simulation.jpg"
+        "image_url": "https://static1.srcdn.com/wordpress/wp-content/uploads/2021/12/Planet-Coaster-Screenshot.jpg?q=50&fit=crop&w=825&dpr=1.5"
       },
       {
         "category": "Shooter",
-        "image_url": "https://example.com/images/shooter.jpg"
+        "image_url": "https://www.pcgamesn.com/wp-content/sites/pcgamesn/2024/10/best-fps-games-black-ops-6-550x309.jpg"
       },
       {
         "category": "Sports",
-        "image_url": "https://example.com/images/sports.jpg"
+        "image_url": "https://talkaboutfootball.co.uk/uploads/2023/08/what-are-the-best-10-soccer-games-for-pc-and-android.webp"
       },
       {
         "category": "Puzzle",
-        "image_url": "https://example.com/images/puzzle.jpg"
+        "image_url": "https://static0.gamerantimages.com/wordpress/wp-content/uploads/2019/11/puzzle-games-feature.jpg?q=50&fit=crop&w=1140&h=&dpr=1.5"
       },
       {
         "category": "Horror",
-        "image_url": "https://example.com/images/horror.jpg"
+        "image_url": "https://assetsio.gnwcdn.com/best-horror-games-header.jpg?width=1920&height=1920&fit=bounds&quality=80&format=jpg&auto=webp"
       },
       {
         "category": "MMO",
-        "image_url": "https://example.com/images/mmo.jpg"
+        "image_url": "https://assetsio.gnwcdn.com/best-mmo-mmorpgs-2022a.jpg?width=1920&height=1920&fit=bounds&quality=80&format=jpg&auto=webp"
       }
     ]
   

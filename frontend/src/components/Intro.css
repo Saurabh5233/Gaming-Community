@@ -10,6 +10,8 @@
     height: 90vh;
     width: 100%;
 
+    color: white;
+
     /* display: flex;
     justify-content: center;
     align-items: center; */
@@ -171,10 +173,11 @@
 
 .gameCard img,
 .categoryCard img {
-  height: auto;
+  height: 200px;
   width: 100%;
   border-radius: 1rem;
 }
+
 
 /* Gradient Separators */
 .section-gradient,
@@ -213,12 +216,17 @@
 
   .categories h1 {
     font-size: 1.5rem;
+    
   }
 
   .section-gradient,
   .section-gradient-end {
     height: 70px; /* Adjust gradient size for smaller screens */
   }
+}
+
+.sample-games > h1{
+  color: white;
 }
 
 @media (max-width: 600px) {
@@ -394,7 +402,7 @@
 
 
     .intro-content > p {
-        font-size: 6rem;  /* Further reduce font size for very small screens */
+        font-size: 6rem;  
         top: 0%;  /* Adjust positioning to fit the screen */
         margin-bottom: 0;
     }

@@ -59,13 +59,13 @@ const Intro = () => {
     
     <div className="section-gradient"></div>
     <div className="sample-games">
-              <h1>Game Category</h1>
+              <h1>Game Categories</h1>
         <div className='game-list'>
 
         {categoryList.map((category, index) => (
             <div key={index} className="gameCard">
               <div className="cardImage">
-                <img src="https://preview.redd.it/halo-5-on-pc-v0-vbj9ktw2z4cc1.jpeg?auto=webp&s=d3ee559a6e6ff499f87c1d8b1108ec4c3f56a03a"  alt={category.category} />
+                <img src={category.image_url}  alt={category.category} />
               </div>
               <h3>{category.category}</h3>
             </div>
@@ -80,7 +80,7 @@ const Intro = () => {
           {gameList.map((game, index) => (
             <div key={index} className="categoryCard">
               <div className="categoryImage">
-                <img src="https://preview.redd.it/halo-5-on-pc-v0-vbj9ktw2z4cc1.jpeg?auto=webp&s=d3ee559a6e6ff499f87c1d8b1108ec4c3f56a03a"  alt={game.game_name} />
+                <img src={game.img_url}  alt={game.game_name} className='imagesize'/>
               </div>
               <h3>{game.game_name}</h3>
             </div>

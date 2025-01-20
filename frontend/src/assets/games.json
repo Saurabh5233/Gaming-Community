@@ -1,51 +1,51 @@
 [
     {
       "game_name": "The Legend of Zelda",
-      "img_url": "https://example.com/zelda.jpg"
+      "img_url": "data:image/webp;base64,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"
     },
     {
       "game_name": "Super Mario Odyssey",
-      "img_url": "https://example.com/super_mario_odyssey.jpg"
+      "img_url": "https://c4.wallpaperflare.com/wallpaper/828/11/820/mario-super-mario-odyssey-cappy-mario-wallpaper-preview.jpg"
     },
     {
       "game_name": "Minecraft",
-      "img_url": "https://example.com/minecraft.jpg"
+      "img_url": "https://d3lzcn6mbbadaf.cloudfront.net/media/details/fffffffeqewrwqeqweqwe.JPG"
     },
     {
       "game_name": "Red Dead Redemption 2",
-      "img_url": "https://example.com/red_dead_redemption_2.jpg"
+      "img_url": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2023/07/red-dead-redemption-2-bonus.jpg?q=70&fit=crop&w=1140&h=&dpr=1"
     },
     {
       "game_name": "Fortnite",
-      "img_url": "https://example.com/fortnite.jpg"
+      "img_url": "https://www.tubefilter.com/wp-content/uploads/2018/05/epic-img-1920x1131.jpg"
     },
     {
-      "game_name": "Call of Duty: Modern Warfare",
-      "img_url": "https://example.com/call_of_duty_modern_warfare.jpg"
+      "game_name": "Call of Duty",
+      "img_url": "https://images.news18.com/ibnlive/uploads/2021/11/call-of-duty-vanguard-16361911214x3.jpg?impolicy=website&width=360&height=270"
     },
     {
-      "game_name": "The Witcher 3: Wild Hunt",
-      "img_url": "https://example.com/witcher_3.jpg"
+      "game_name": "The Witcher 3",
+      "img_url": "https://static1.cbrimages.com/wordpress/wp-content/uploads/2024/04/split-images-of-triss-geralt-and-ciri.jpg?q=70&fit=crop&w=1140&h=&dpr=1"
     },
     {
       "game_name": "Overwatch",
-      "img_url": "https://example.com/overwatch.jpg"
+      "img_url": "https://www.nintendo.com/eu/media/images/10_share_images/games_15/nintendo_switch_download_software_1/2x1_NSwitchDS_Overwatch2_Season6_image1600w.png"
     },
     {
       "game_name": "Apex Legends",
-      "img_url": "https://example.com/apex_legends.jpg"
+      "img_url": "https://gaming-cdn.com/images/news/articles/9130/cover/1000x563/apex-legends-season-23-brings-us-the-great-return-of-the-original-map-with-classic-weapons-and-abilities-cover672a4833f1b62.jpg"
     },
     {
-      "game_name": "Animal Crossing: New Horizons",
-      "img_url": "https://example.com/animal_crossing_new_horizons.jpg"
+      "game_name": "Animal Crossing",
+      "img_url": "https://upload.wikimedia.org/wikipedia/en/1/1f/Animal_Crossing_New_Horizons.jpg"
     },
     {
       "game_name": "Grand Theft Auto V",
-      "img_url": "https://example.com/grand_theft_auto_v.jpg"
+      "img_url": "https://upload.wikimedia.org/wikipedia/en/a/a5/Grand_Theft_Auto_V.png"
     },
     {
       "game_name": "Hades",
-      "img_url": "https://example.com/hades.jpg"
+      "img_url": "https://platform.polygon.com/wp-content/uploads/sites/2/chorus/uploads/chorus_asset/file/25431974/hades_artHD.jpg?quality=90&strip=all&crop=7.8125%2C0%2C84.375%2C100&w=828"
     }
   ]
   
