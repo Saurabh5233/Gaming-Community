@@ -62,7 +62,9 @@ const CommunityPage = () => {
         body: JSON.stringify({ ...newMember, role: "Community Member" }),
       });
       const data = await response.json();
+
       alert("Member Added SuccessFully")
+
       console.log("Member added:", data);
       setMemId(data.memId);
     } catch (err) {
