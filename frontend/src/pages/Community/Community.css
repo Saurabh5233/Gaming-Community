@@ -76,6 +76,63 @@ h1 {
   margin-left: 20px;
 } 
 
+/* form section */
+.form{
+  position: relative;
+  left: 25%;
+  background-color: rgb(42, 42, 42);
+  display: flex;
+  justify-content: center;
+  max-width: 50%;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+
+}
+ .join-community{
+  width: 70%;
+  text-align: left;
+  font-size: large;
+  
+}
+/*
+form{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+form label{
+  color: white;
+  margin-top: 0.3rem;
+}
+form input{
+  height: 2rem;
+}
+
+form input{
+  width: 100%;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+  border: none;
+}
+
+form input:focus, #joinbtn:focus {
+  outline: 2px solid #e94560;
+}
+  */
+
+#joinbtn {
+  width: 50%;
+  margin-top: 1rem;
+  background-color: #e94560;
+  color: white;
+  cursor: pointer;
+}
+
+#joinbtn:hover {
+  background-color: #b73548;
+} 
+
 
 
 /* Responsive Sidebar for Mobile Screens */
@@ -104,4 +161,33 @@ h1 {
   .member-cards-container {
     margin-left: 0;
   }
+
+  /* .form {
+    max-width: 90%;
+    left: auto;
+  }
+
+  form {
+    width: 100%;
+  }
+*/
+  #joinbtn {
+    width: 50%;
+  } 
+}
+
+@media (max-width: 480px) {
+  /* 
+  .form {
+    padding: 0.5rem;
+  }
+  form input, #joinbtn {
+    font-size: 0.9rem;
+  }
+    */
+
+  .join-community {
+    font-size: medium;
+  }
+
 } 
