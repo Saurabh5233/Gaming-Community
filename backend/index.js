@@ -3,6 +3,7 @@ const app = express();
 const bodyParser = require('body-parser');
 const cors = require('cors');
 const AuthRouter = require('./Routes/AuthRouter');
+const CommRouter = require('./Routes/CommRoutes')
 const UserModel = require('./Models/User');
 require('dotenv').config();
 require('./Models/db');
@@ -14,6 +15,7 @@ app.use(cors());
 
 // Routes
 app.use('/auth', AuthRouter);
+app.use('/comm',CommRouter)
 
 // Fetch All User Details
 app.get("/userDetail", async (req, res) => {

@@ -2,102 +2,84 @@ import React from "react";
 import "./Community/Community.css";
 import Community from "./Community/Community";
 import "./pages.css";
-import { useState } from "react";
-
-const membersData = [
-  {
-    name: "Saurabh Shandilya",
-    role: "Community Lead",
-    points: { lightning: 10, diamond: 5, heart: 2 },
-    image: "https://images.pexels.com/users/avatars/415023969/saurabh-shandilya-170.jpeg?auto=compress&fit=crop&h=130&w=130&dpr=1",
-    badges: ["medal", "plus"],
-  },
-  {
-    name: "Ram Chandra",
-    role: "Hardware",
-    points: { lightning: 7, diamond: 3, heart: 1 },
-    image: "https://i.ibb.co/frqp4mc/IMG-20241223-WA0018.jpg",
-    badges: ["medal", "plus"],
-  },
-  {
-    name: "Kushang",
-    role: "Guides",
-    points: { lightning: 12, diamond: 6, heart: 4 },
-    image: "https://i.ibb.co/7yjvJ2v/IMG-20241223-WA0019.jpg",
-    badges: ["medal", "plus"],
-  },
-  {
-    name: "Prashant",
-    role: "Design",
-    points: { lightning: 8, diamond: 4, heart: 3 },
-    image: "https://rosepng.com/wp-content/uploads/2024/10/s11728_fortnite_character_isolated_on_white_background_-styl_2a9ed7c0-a0d3-4d44-95d1-e191463730e9_0-photoroom.png",
-    badges: ["medal", "plus"],
-  },
-  {
-    name: "Vernon Dahmer",
-    role: "Guides",
-    points: { lightning: 15, diamond: 7, heart: 5 },
-    image: "https://rosepng.com/wp-content/uploads/2024/10/s11728_fortnite_character_isolated_on_white_background_-styl_2a9ed7c0-a0d3-4d44-95d1-e191463730e9_0-photoroom.png",
-    badges: ["medal", "plus"],
-  },
-  {
-    name: "Siobhan Millavic",
-    role: "Guides",
-    points: { lightning: 11, diamond: 3, heart: 6 },
-    image: "https://rosepng.com/wp-content/uploads/2024/10/s11728_fortnite_character_isolated_on_white_background_-styl_2a9ed7c0-a0d3-4d44-95d1-e191463730e9_0-photoroom.png",
-    badges: ["medal", "plus"],
-  },
-  {
-    name: "Taba Carew",
-    role: "Developer",
-    points: { lightning: 18, diamond: 8, heart: 9 },
-    image: "https://rosepng.com/wp-content/uploads/2024/10/s11728_fortnite_character_isolated_on_white_background_-styl_2a9ed7c0-a0d3-4d44-95d1-e191463730e9_0-photoroom.png",
-    badges: ["medal", "plus"],
-  },
-  {
-    name: "Wynonn Judd",
-    role: "Support",
-    points: { lightning: 5, diamond: 2, heart: 0 },
-    image: "https://rosepng.com/wp-content/uploads/2024/10/s11728_fortnite_character_isolated_on_white_background_-styl_2a9ed7c0-a0d3-4d44-95d1-e191463730e9_0-photoroom.png",
-    badges: ["medal"],
-  },
-  // {
-  //   name: "Francis Beauregard",
-  //   role: "Community Manager",
-  //   points: { lightning: 22, diamond: 10, heart: 12 },
-  //   image: "https://rosepng.com/wp-content/uploads/2024/10/s11728_fortnite_character_isolated_on_white_background_-styl_2a9ed7c0-a0d3-4d44-95d1-e191463730e9_0-photoroom.png",
-  //   badges: ["medal", "star"],
-  // },
-  // {
-  //   name: "Alexandra Trent",
-  //   role: "Moderator",
-  //   points: { lightning: 14, diamond: 6, heart: 3 },
-  //   image: "https://rosepng.com/wp-content/uploads/2024/10/s11728_fortnite_character_isolated_on_white_background_-styl_2a9ed7c0-a0d3-4d44-95d1-e191463730e9_0-photoroom.png",
-  //   badges: ["star", "plus"],
-  // },
-  // {
-  //   name: "Zara Lennox",
-  //   role: "Marketing",
-  //   points: { lightning: 9, diamond: 4, heart: 2 },
-  //   image: "https://rosepng.com/wp-content/uploads/2024/10/s11728_fortnite_character_isolated_on_white_background_-styl_2a9ed7c0-a0d3-4d44-95d1-e191463730e9_0-photoroom.png",
-  //   badges: ["medal", "plus"],
-  // },
-  // {
-  //   name: "Omar Rivera",
-  //   role: "Security Specialist",
-  //   points: { lightning: 16, diamond: 9, heart: 5 },
-  //   image: "https://rosepng.com/wp-content/uploads/2024/10/s11728_fortnite_character_isolated_on_white_background_-styl_2a9ed7c0-a0d3-4d44-95d1-e191463730e9_0-photoroom.png",
-  //   badges: ["shield", "medal"],
-  // },
-];
-
-
+import { useState,useEffect } from "react";
+import membersData from "../assets/membersData.json"
 
 
 
 const CommunityPage = () => {
   const [showSidebar, setShowSidebar] = useState(false);
+  const [memId,setMemId] = useState("")
+  // const [membersData, setMembersData] = useState([]);
   const token = localStorage.getItem("token");
+  const [newMember, setNewMember] = useState({
+    name: "",
+    points: { lightning: 16, diamond: 9, heart: 5 },
+    image: "",
+    phone: "",
+    email: "",
+    badge: ["shield", "medal"],
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setNewMember((prev) => ({ ...prev, [name]: value }));
+  };
+
+  // const handleFetch = async()=>{
+  //   const url = `${import.meta.env.VITE_REACT_APP_BACKEND_URL}/comm/`;
+  //   try{
+  //     const response = await fetch(url,{
+  //       method:"GET",
+  //       headers: {
+  //         "Content-Type": "application/json",
+  //       },
+  //     });
+  //     const data = response.json()
+  //     console.log(data)
+  //     setMembersData(data);
+  //   }catch(error){
+  //     console.log("Error fetching data",error);
+  //   }
+    
+  // }
+
+
+  // useEffect(() => {
+  //   handleFetch();
+  // }, []);
+
+  const handleAddMember = async (e) => {
+    e.preventDefault();
+    const url = `${import.meta.env.VITE_REACT_APP_BACKEND_URL}/comm/add`;
+
+    try {
+      const response = await fetch(url, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ ...newMember, role: "Community Member" }),
+      });
+      const data = await response.json();
+      alert("Member Added SuccessFully")
+      console.log("Member added:", data);
+      setMemId(data.memId);
+    } catch (err) {
+      console.error("Error adding member:", err);
+    }
+  };
+
+  const handleDeleteMember = async (memId) => {
+    try {
+      const url = `${import.meta.env.VITE_REACT_APP_BACKEND_URL}/comm/del/${memId}`;
+      const response = await fetch(url, { method: "DELETE" });
+      const data = await response.json();
+      console.log("User deleted:", data);
+    } catch (err) {
+      console.error("Error deleting user:", err);
+    }
+  };
 
 
   return (
@@ -106,16 +88,11 @@ const CommunityPage = () => {
       <div className="page-heading">
         <h1>Community Members</h1>
 
-
-        
-
-
-
-          {/* Member Cards Section */}
-          <div className="member-cards-container">
-            {token ? (
-              <>
-                <div className="community-layout">
+        {/* Member Cards Section */}
+        <div className="member-cards-container">
+          {token ? (
+            <>
+              <div className="community-layout">
                 {/* Sidebar */}
                 <div className={`sidebar ${showSidebar ? "active" : ""}`}>
                   <h2>Points</h2>
@@ -147,12 +124,49 @@ const CommunityPage = () => {
                     <Community key={index} member={member} />
                   ))}
                 </div>
-          </div>
-              </>
+              </div>
+              <hr />
+              <div className="form">
+              <div className="join-community">
+                <form onSubmit={handleAddMember}>
+                  <label htmlFor="name">Name:</label>
+                  <input type="text"
+                  name="name"
+                  onChange={handleChange}
+                  value={newMember.name}
+                  placeholder="Enter Your Name"
+                  />
+                  <label htmlFor="image">Add Image Url:</label>
+                  <input type="text" 
+                  name="image"
+                  onChange={handleChange}
+                  value={newMember.image}
+                  placeholder="Add your image url"
+                  />
+                  <label htmlFor="phone">Contact No:</label>
+                  <input type="text"
+                  name="phone"
+                  onChange={handleChange}
+                  value={newMember.phone}
+                  placeholder="Enter your contact number"
+                  />
+                  <label htmlFor="email">Email:</label>
+                  <input type="email"
+                  name="email"
+                  onChange={handleChange}
+                  value={newMember.email}
+                  placeholder="Enter your email"
+                  />
+                  <button id= "joinbtn" type="submit" >Join Now</button>
+                </form>
 
-            ) : (
-              <h2>Please Login to see community.</h2>
-            )}
+              </div>
+              </div>
+            </>
+
+          ) : (
+            <h2>Please Login to see community.</h2>
+          )}
         </div>
       </div>
 
